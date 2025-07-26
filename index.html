@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>便利商店調酒遊戲</title>
+  <link rel="stylesheet" href="style.css?v=1.0.0">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#ff6b6b">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('./service-worker.js');
+    }
+  </script>
+</head>
+<body>
+  <h1>便利商店調酒遊戲</h1>
+  <div class="slot-container">
+    <div class="slot" id="slot1">❓</div>
+    <div class="slot" id="slot2">❓</div>
+  </div>
+  <div>
+    <button onclick="rollSlot('slot1')">抽食材 1</button>
+    <button onclick="rollSlot('slot2')">抽食材 2</button>
+  </div>
+  <div class="result" id="result"></div>
+
+  <script src="script.js?v=1.0.0"></script>
+</body>
+</html>
